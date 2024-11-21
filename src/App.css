@@ -1,0 +1,258 @@
+.konteiner{
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+  color: white;
+  background: url("../public/img/bg.jpeg");
+  &::-webkit-scrollbar{
+    display: none;
+  }
+ 
+}
+.sektsioonhero{
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ align-items: center;
+  
+}
+.herokonteiner{
+  height: 100%;
+  scroll-snap-align: center;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.herokonteinerleft{
+flex: 2;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 20px;
+}
+.title{
+font-size: 74px;
+}
+.whatwedo{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.line{
+height: 5px;
+
+}
+.subtitle{
+color: orange;
+}
+.desc{
+font-size: 24px;
+color: lightgray;
+}
+
+
+.herokonteinerright{
+  flex: 3;
+  position: relative;
+ 
+}
+.kuu{
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+}
+@keyframes animate {
+  to{
+    transform:translateY(20px);
+  }
+}
+.sektsioonwho{
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* WHO */
+.whokonteinerleft{
+  flex: 1;
+ 
+  }
+  .whokonteinerright{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+/* WORKS */
+.sektsioonworks{
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+}
+.workskonteiner {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.workskonteinerleft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    justify-content: center;
+  }
+}
+
+.workslist{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.workslistitem {
+  font-size: 90px;
+  font-weight: bold;
+  cursor: pointer;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
+}
+
+.workslistitem::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: orange;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.workslistitem:hover::after {
+  animation: moveText 0.5s linear both;
+}
+
+@keyframes moveText {
+  to {
+    width: 100%;
+  }
+}
+
+
+.workslistitem:hover{
+  font-weight: bold;
+  -webkit-text-stroke: transparent;
+  text-decoration: none;
+  border: none; /* Ensure no border */
+  box-shadow: none; /* Ensure no box shadow */
+}
+
+.workskonteinerright{
+  flex: 1;
+}
+
+
+
+.sektsiooncontact{
+  height: 100vh;
+ 
+  scroll-snap-align: center;
+}
+
+
+.navbars{
+  display: flex;
+  justify-content: center;
+
+}
+.navbarc{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  
+}
+.list{
+  display: flex;
+  gap: 20px;
+}
+
+
+.links{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.logo{
+  height: 50px;
+}
+
+.listitem{
+  cursor: pointer;
+}
+.icon{
+  width: 20px;
+  cursor: pointer;
+}
+.button{
+  cursor: pointer;
+  width: 100px;
+  padding: 10px;
+  background-color: orange;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.button2{
+  cursor: pointer;
+  width: 120px;
+  padding: 10px;
+  background-color: orange;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.icons{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
